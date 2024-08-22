@@ -26,6 +26,14 @@ router.get("/:details", async (req, res) => {
         res.status(500).json({ message: "Internal server error." });
     }
 });
+router.get("/",async(req,res)=>{
+    try{
+        const data = await availableModel.find();
+        res.status(200).json(data);
+    }catch(err){
+        res.status(500).json({message:err.message})
+    }
+});
 router.post("/", async (req, res) => {
     try {
         const {busName,busWay,departureDate,departureTime,timeRequired,ticketPrice} = req.body;
