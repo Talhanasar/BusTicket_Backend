@@ -10,11 +10,6 @@ html {
     position: relative;
 }
 
-#main{
-    position: relative;
-    height: 100vh;
-}
-
 #yetiSVG {
     width: 37.5rem;
     height: 29.38rem;
@@ -79,7 +74,7 @@ html {
     .content{
         display: inline-block;
         position: absolute;
-        bottom: 6rem;
+        top: 35rem;
         left: 0;
         padding: 0 2rem;
         h3{
@@ -98,10 +93,9 @@ html {
         }
         .content{
             padding: 0 0.7rem;
-            bottom: 17rem;
-            width: 10rem;
+            top: 20rem;
             #suggest{
-                width: 10rem;
+                width: auto;
             }
             h3{
                 font-size: 0.9rem;
