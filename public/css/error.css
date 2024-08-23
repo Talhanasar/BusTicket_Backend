@@ -99,8 +99,9 @@ html {
         .content{
             padding: 0 0.7rem;
             bottom: 17rem;
+            width: 10rem;
             #suggest{
-                width: auto;
+                width: 10rem;
             }
             h3{
                 font-size: 0.9rem;
