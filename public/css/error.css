@@ -93,15 +93,14 @@ html {
     }
     @media (width<30em){
         #yetiSVG,#lightSVG{
-            width: 17rem;
-            height: calc(17rem * 0.784);
+            width: 19rem;
+            height: calc(19rem * 0.784);
         }
         .content{
             padding: 0 0.7rem;
             bottom: 17rem;
-            width: 17rem;
             #suggest{
-                width: 17rem;
+                width: auto;
             }
             h3{
                 font-size: 0.9rem;
