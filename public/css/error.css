@@ -91,4 +91,24 @@ html {
             color: gray;
         }
     }
+    @media (width<30em){
+        #yetiSVG,#lightSVG{
+            width: 17rem;
+            height: calc(17rem * 0.784);
+        }
+        .content{
+            padding: 0 0.7rem;
+            bottom: 17rem;
+            width: 17rem;
+            #suggest{
+                width: 17rem;
+            }
+            h3{
+                font-size: 0.9rem;
+            }
+            p{
+                font-size: 0.5rem;
+            }
+        }
+    }
 }
