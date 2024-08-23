@@ -92,16 +92,10 @@ html {
             height: calc(19rem * 0.784);
         }
         .content{
-            padding: 0 0.7rem;
+            padding: 0 0.9rem;
             top: 20rem;
             #suggest{
                 width: auto;
-            }
-            h3{
-                font-size: 0.9rem;
-            }
-            p{
-                font-size: 0.5rem;
             }
         }
     }
