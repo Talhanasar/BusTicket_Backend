@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,900');
+
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    background-color: #09334f;
+    position: relative;
+}
+
+#main{
+    position: relative;
+    height: 100vh;
+}
+
+#yetiSVG {
+    width: 37.5rem;
+    height: 29.38rem;
+    transition: all 0.5s ease;
+    
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+}
+
+#lightSVG {
+    width: 37.5rem;
+    height: 29.38rem;
+    transition: all 0.5s ease;
+    position: absolute;
+    top: 0;
+    left: 0;
+    overflow: visible;
+}
+
+.content {
+    padding: 5rem 3rem 0 25rem;
+    position: relative;
+    z-index: 10;
+    font-family: 'Source Sans Pro', sans-serif;
+    color: #FFF;
+
+    h3 {
+        margin: 0 0 .8rem;
+        font-size: 2.625rem;
+        font-weight: 900;
+        line-height: 120%;
+    }
+
+    p {
+        font-size: 1.25rem;
+        font-weight: normal;
+        line-height: 150%;
+        color: #d1e2ed;
+
+        #strike {
+            text-decoration: line-through;
+        }
+    }
+
+    #suggest {
+        width: 40rem;
+        margin: auto;
+
+        span {
+            color: greenyellow;
+        }
+    }
+}
+
+@media (width< 41em){
+    #yetiSVG,#lightSVG{
+        width: 100vw;
+        height: calc(100vw * 0.784);
+    }
+    .content{
+        display: inline-block;
+        position: absolute;
+        bottom: 6rem;
+        left: 0;
+        padding: 0 2rem;
+        h3{
+            font-size: 1.2rem;
+            color: gray;
+        }
+        p{
+            font-size: 0.8rem;
+            color: gray;
+        }
+    }
+}
