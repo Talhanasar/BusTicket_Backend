@@ -6,7 +6,7 @@ const availableModel = require("../models/availableBusModel");
 router.get("/:busId",async (req,res)=>{
     try{
         const data = await bookedModel.find({busId:req.params.busId});
-        res.send(data);
+        res.json(data);
     }catch(err){
         res.status(500).json({ message: err.message });
     }
@@ -15,7 +15,7 @@ router.get("/:busId",async (req,res)=>{
 router.get("/", async (req,res)=>{
     try{
         const data = await bookedModel.find();
-        res.send(data);
+        res.json(data);
     }catch(err){
         res.status(500).json({message:error.message})
     }

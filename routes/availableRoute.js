@@ -18,7 +18,7 @@ router.get("/:details", async (req, res) => {
             busWay,
             departureDate
         });
-        res.send(data);
+        res.json(data);
     } catch (error) {
         console.error("Error fetching buses:", error);
         res.status(500).json({ message: "Internal server error." });
@@ -27,7 +27,7 @@ router.get("/:details", async (req, res) => {
 router.get("/",async(req,res)=>{
     try{
         const data = await availableModel.find();
-        res.send(data);
+        res.json(data);
     }catch(err){
         res.status(500).json({message:err.message})
     }
