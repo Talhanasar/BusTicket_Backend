@@ -20,7 +20,7 @@ router.get("/:details", async (req, res) => {
             busWay,
             departureDate
         });
-        res.status(200).send(data);
+        res.status(200).json(data);
     } catch (error) {
         console.error("Error fetching buses:", error);
         res.status(500).json({ message: "Internal server error." });
