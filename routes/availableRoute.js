@@ -14,13 +14,11 @@ router.get("/:details", async (req, res) => {
     try {
         const busWay = capitalizeWords(req.params.details.split(" ")[0]);
         const departureDate = req.params.details.split(" ")[1];
-        console.log(busWay);
-        console.log(departureDate);
         const data = await availableModel.find({
             busWay,
             departureDate
         });
-        res.status(200).json(data);
+        res.send(data);
     } catch (error) {
         console.error("Error fetching buses:", error);
         res.status(500).json({ message: "Internal server error." });
@@ -29,7 +27,7 @@ router.get("/:details", async (req, res) => {
 router.get("/",async(req,res)=>{
     try{
         const data = await availableModel.find();
-        res.status(200).json(data);
+        res.send(data);
     }catch(err){
         res.status(500).json({message:err.message})
     }
@@ -45,7 +43,7 @@ router.post("/", async (req, res) => {
             timeRequired,
             ticketPrice
         })
-        res.status(200).json({ message: "Data received successfully" });
+        res.status(201).json({ message: "Data received successfully" });
     } catch (error) {
         console.error("Error creating bus entry:", error);
         res.status(500).json({ message: "Internal server error." });
