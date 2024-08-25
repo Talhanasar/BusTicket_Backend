@@ -12,8 +12,15 @@ function capitalizeWords(str) {
 // GET route to fetch available buses based on way and date
 router.get("/:details", async (req, res) => {
     try {
-        const busWay = capitalizeWords(req.params.details.split(" ")[0]);
-        const departureDate = req.params.details.split(" ")[1];
+        const details = req.params.details
+        if(details.includes('id')){
+            const allData = await availableModel.findOne({
+                _id: req.params.details.split("=")[1]
+            }).populate('ticketID');
+            return res.json(allData);
+        }
+        const busWay = capitalizeWords(details.split(" ")[0].split("=")[1]);
+        const departureDate = details.split(" ")[1].split('=')[1].split('-').join('/');
         const data = await availableModel.find({
             busWay,
             departureDate
