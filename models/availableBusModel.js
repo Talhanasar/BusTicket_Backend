@@ -24,10 +24,22 @@ const availableSchema = new mongoose.Schema({
         type: Number,
         required: true
     },
-    ticketID:[{
+    boardingPoint:{
+        type: String,
+        required: true
+    },
+    droppingPoint:{
+        type: String,
+        required: true
+    },
+    seatsAvailable:{
+        type: Number,
+        default: 45
+    },
+    ticketId:[{
         type: mongoose.Schema.Types.ObjectId,
-        ref: "bookedTicket"
+        ref: "Customer" // Make sure this matches the registered model name
     }]
-})
+});
 
-module.exports = mongoose.model("availableBus",availableSchema);
+module.exports = mongoose.model("availableBus", availableSchema);
