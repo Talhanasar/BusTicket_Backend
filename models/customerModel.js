@@ -25,6 +25,10 @@ const customerSchema = new mongoose.Schema({
         type: mongoose.Schema.Types.ObjectId,
         ref: "Coupon"
     },
+    totalMoney:{
+        type: String,
+        required:true
+    },
     bookingDate: {
         type: String,
         default: () => new Date().toISOString().split('T')[0] // YYYY-MM-DD
