@@ -1,6 +1,6 @@
 # Bus Ticket API
 
-Welcome to the Bus Ticket API! This API provides endpoints for retrieving information about available buses and booked tickets for your bus booking system.
+Welcome to the Bus Ticket API! This API provides endpoints for retrieving information about available buses and booked tickets for your bus booking system. Data is managed and stored using MongoDB.
 
 ## API Endpoints
 
@@ -12,9 +12,6 @@ Retrieve all available buses for a specific date and route.
 
 GET https://bus-ticket-api.vercel.app/api/{apiKey}/availablebus/way={route}%20date={date}
 
-markdown
-Copy code
-
 **Parameters:**
 
 - `{apiKey}`: Your API key (contact the creator for an API key).
@@ -25,8 +22,6 @@ Copy code
 
 GET https://bus-ticket-api.vercel.app/api/yourApiKey/availablebus/way=chittagong-dhaka%20date=2024-08-29
 
-sql
-Copy code
 
 **Response:**
 
@@ -40,8 +35,6 @@ Retrieve all booked tickets for buses or get tickets for a specific bus.
 
 GET https://bus-ticket-api.vercel.app/api/{apiKey}/bookedTicket/
 
-markdown
-Copy code
 
 **Parameters:**
 
@@ -51,8 +44,6 @@ Copy code
 
 GET https://bus-ticket-api.vercel.app/api/yourApiKey/bookedTicket/
 
-sql
-Copy code
 
 **Response:**
 
@@ -66,8 +57,6 @@ Retrieve booked tickets for a specific bus by its ID.
 
 GET https://bus-ticket-api.vercel.app/api/{apiKey}/bookedTicket/{id}
 
-markdown
-Copy code
 
 **Parameters:**
 
@@ -78,16 +67,23 @@ Copy code
 
 GET https://bus-ticket-api.vercel.app/api/yourApiKey/bookedTicket/12345
 
-yaml
-Copy code
-
 **Response:**
 
 Returns a list of booked tickets for the specified bus.
 
+## Data Management
+
+This API uses MongoDB for data storage and management. MongoDB is utilized to handle the following:
+
+- **Available Buses**: Information about buses, including their schedules and availability.
+- **Booked Tickets**: Details of booked tickets, including bus IDs and customer information.
+
 ## Contact
 
-For an API key or any other inquiries, please contact the creator of the API.
+For an API key or any other inquiries, please contact:
+
+- **Email**: [talhabinnasar7@gmail.com](mailto:talhabinnasar7@gmail.com)
+- **LinkedIn**: [Talha's LinkedIn Profile](https://www.linkedin.com/in/talha-7642a1264/)
 
 ---
 
